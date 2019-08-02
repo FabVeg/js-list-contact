@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carnet d'adresses</title>
+    <script src="https://kit.fontawesome.com/5518ccaa0d.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="utilities.js"></script>
+</head>
+<body>
+    <section class="content">
+        <h1><i class="fa fa-book"></i> Carnet d'Adresses</h1>
+
+        <!-- Contenu du carnet d'adresses (liste de contacts) -->
+        <section id="address-book"></section>
+
+        <!-- Détails d'un contact particulier du carnet d'adresses -->
+        <aside id="contact-details" class="hidden">
+            <h3></h3>
+            <p></p>
+            <a href="#">Editer ce contact</a>
+        </aside>
+
+        <nav>
+            <ul id='toolbar' class="menu flex flex-start">
+                <li><button id="add-contact" title="Ajouter un contact"><i class="fa fa-plus"></i></button></li>
+                <li><button id="clear-address-book" title="Effacer le carnet d'adresses"><i class="fa fa-trash-o"></i></button></li>
+            </ul>
+        </nav>
+    </section>
+
+    <!-- Le formulaire de saisie de contact ne s'affiche pas au démarrage -->
+    <form id="contact-form" class="content form hidden" >
+        <ul>
+            <li>
+                <label for="title">Civilité :</label>
+                <select id="title" name="title">
+                    <option value="1">Madame</option>
+                    <option value="2">Mademoiselle</option>
+                    <option value="3">Monsieur</option>
+                </select>
+            </li>
+            <li>
+                <label for="lastName">Nom :</label>
+                <input id="lastName" type="text" name="lastName">
+            </li>
+            <li>
+                <label for="firstName">Prénom :</label>
+                <input id="firstName" type="text" name="firstName">
+            </li>
+            <li>
+                <label for="phone">Téléphone :</label>
+                <input id="phone" type="text" name="phone" maxlength="10">
+            </li>
+            <li><label></label>
+                <input type="submit" class="button" id="save-contact" value="Enregistrer">
+            </li>
+        </ul>
+    </form>
+    <footer>    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
